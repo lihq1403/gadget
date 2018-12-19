@@ -9,6 +9,52 @@
 
 
 /**
+ * 冒泡排序, 不断比较，将最小的放到第一个
+ * 对于一个长度为N的数组，我们需要排序 N-1 轮，每 i 轮 要比较 N-i 次
+ * @param $arr
+ * @return mixed
+ */
+function bubble_sort($arr){
+    $count = count($arr);
+    for ($i=0;$i<$count;$i++){
+        for ($j=$count-1;$j>$i;$j--){
+            if ($arr[$j] < $arr[$j-1]){
+                $tmp = $arr[$j];
+                $arr[$j] = $arr[$j-1];
+                $arr[$j-1] = $tmp;
+            }
+        }
+    }
+    return $arr;
+}
+
+/**
+ * 快速排序
+ * @param $arr
+ * @return array
+ */
+function quick_sort($arr){
+    $count = count($arr);
+    if ($count<=1){
+        return $arr;
+    }
+    $key = $arr[0];
+    $left_arr = [];
+    $right_arr = [];
+    for ($i=1;$i<$count;$i++){
+        if ($arr[$i] <= $key){
+            $left_arr[] = $arr[$i];
+        } else {
+            $right_arr[] = $arr[$i];
+        }
+    }
+    $left_arr = quick_sort($left_arr);
+    $right_arr = quick_sort($right_arr);
+    return array_merge($left_arr, [$key], $right_arr);
+}
+
+
+/**
  * 二分查找
  * @param $array | 需要查找的数组
  * @param $low | 数组起始元素下标
