@@ -1,5 +1,5 @@
 # PHP设计模式
-- [PHP 设计模式全集 2018 ](https://learnku.com/docs/php-design-patterns/2018)
+- [PHP 设计模式全集 2018 ](https://learnku.com/docs/php-design-patterns/2018?_blank)
 
 ## 创建型
 - [x] 抽象工厂模式（Abstract Factory）
