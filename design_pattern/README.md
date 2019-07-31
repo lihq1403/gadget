@@ -8,7 +8,7 @@
 - [x] 建造者模式（Builder）
 - [x] 工厂方法模式（Factory Method）
 - [x] 多例模式（Multiton）
-- [ ] 对象池模式（Pool）
+- [x] 对象池模式（Pool）
 - [ ] 原型模式（Prototype）
 - [x] 简单工厂模式（Simple Factory）
 - [x] 单例模式（Singleton）
