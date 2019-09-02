@@ -25,7 +25,7 @@
 - [ ] 流接口模式（Fluent Interface）
 - [ ] 享元模式（Flyweight）
 - [ ] 代理模式（Proxy）
-- [ ] 注册模式（Registry）
+- [x] 注册模式（Registry）
 
 ## 行为型
 - [ ] 责任链模式（Chain Of Responsibilities）
