@@ -15,7 +15,7 @@
 - [ ] 静态工厂模式（Static Factory）
 
 ## 结构型
-- [ ] 适配器模式（Adapter）
+- [x] 适配器模式（Adapter）
 - [ ] 桥梁模式（Bridge）
 - [ ] 组合模式（Composite）
 - [ ] 数据映射模式（Data Mapper）
