@@ -219,11 +219,16 @@ class DdzPoker
         return false;
     }
 
+    /**
+     * 判断是否三带一
+     * @param $arr_card
+     * @return bool
+     */
     public function isSanDaiYi($arr_card)
     {
         if (count($arr_card) == 4) {
             // 排序
-            $arr_card = $this->_sortCardByGrade($arr_card);var_dump($arr_card);
+            $arr_card = $this->_sortCardByGrade($arr_card);
 
             // 判断单张是否是后面的
             if ($this->isSan(array_slice($arr_card, 0, 3))) {
@@ -232,6 +237,63 @@ class DdzPoker
             // 判断单张是否是前面的
             if ($this->isSan(array_slice($arr_card, 1, 3))) {
                 return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * 判断是否为三带二
+     * @param $arr_card
+     * @return bool
+     */
+    public function isSanDaiEr($arr_card)
+    {
+        if (count($arr_card) == 5) {
+            // 排序
+            $arr_card = $this->_sortCardByGrade($arr_card);
+
+            // 判断对子是否是后面的
+            if ($this->isSan(array_slice($arr_card, 0, 3))) {
+                if ($this->isDui(array_slice($arr_card, 3, 2))) {
+                    return true;
+                }
+            }
+
+            // 判断对子是否是前面的
+            if ($this->isSan(array_slice($arr_card, 2,3))) {
+                if ($this->isDui(array_slice($arr_card, 0, 2))) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    /**
+     * 判断是否为顺子
+     * @param $arr_card
+     * @return bool
+     */
+    public function isShunZi($arr_card)
+    {
+        $cnt = count($arr_card);
+        if ($cnt >= 5 && $cnt <= 12) {
+            // 排序
+            $arr_card = $this->_sortCardByGrade($arr_card);
+
+            // 排序之后，数量不等，代表有相等的牌
+            if (count($arr_card) != $cnt) {
+                return false;
+            }
+
+            for ($i = 0 ; $i < $cnt - 1; $i++) {
+                // 过滤大小王，2
+                if (!in_array($this->_getModVal($arr_card[$i]), [13, 14, 15])) {
+                    if ($this->_getModVal($arr_card[$i+1]) - $this->_getModVal($arr_card[$i]) == 1) {
+                        return true;
+                    }
+                }
             }
         }
         return false;
@@ -271,7 +333,7 @@ class DdzPoker
 
 $obj = new DdzPoker();
 
-var_dump($obj->isSanDaiYi(['红桃_9','红桃_9','红桃_9','红桃_8']));exit();
+var_dump($obj->isShunZi([3,4,5,6,7,8,7]));exit();
 
 
 echo '<pre>';
