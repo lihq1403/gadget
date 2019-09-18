@@ -39,3 +39,24 @@ function circle($n, $m)
 }
 
 echo circle(100, 7);
+
+function get_king_monkey($n, $m)
+{
+    $arr = range(1, $n);
+
+    $i = 0;
+
+    while (count($arr) > 1) {
+        $i++;
+
+        $sur = array_shift($arr);
+
+        if ($i % $m != 0) {
+            array_push($arr, $sur);
+        }
+    }
+
+    return $arr[0];
+}
+
+echo  get_king_monkey(100, 7);
