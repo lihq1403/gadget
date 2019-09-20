@@ -4,7 +4,7 @@
 $serv = new Swoole\Server("127.0.0.1", 9501);
 
 $serv->set([
-    'worker_num' => 8, // worker进程数 spu核数1-4倍
+    'worker_num' => 4, // worker进程数 cpu核数1-4倍
     'max_request' => 10000,
 ]);
 
