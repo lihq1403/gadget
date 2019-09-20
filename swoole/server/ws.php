@@ -12,8 +12,15 @@ class Ws
     {
         $this->ws = new Swoole\WebSocket\Server(self::HOST, self::PORT);
 
+        $this->ws->set([
+            'worker_num' => 2,
+            'task_worker_num' => 2
+        ]);
+
         $this->ws->on('open', [$this, 'onOpen']);
         $this->ws->on('message', [$this, 'onMessage']);
+        $this->ws->on('task', [$this, 'onTask']);
+        $this->ws->on('finish', [$this, 'onFinish']);
         $this->ws->on('close', [$this, 'onClose']);
 
         $this->ws->start();
@@ -37,7 +44,42 @@ class Ws
     public function onMessage($ws, $frame)
     {
         echo "receive from {$frame->fd}:{$frame->data},opcode:{$frame->opcode},fin:{$frame->finish}\n";
+
+        // todo 10s
+        $data = [
+            'task' => 1,
+            'fd' => $frame->fd,
+        ];
+        $ws->task($data);
+
         $ws->push($frame->fd, "this is server".date("Y-m-d H:i:s"));
+    }
+
+    /**
+     * @param $server
+     * @param $task_id
+     * @param $worker_id
+     * @param $data
+     * @return string
+     */
+    public function onTask($server, $task_id, $worker_id, $data)
+    {
+        print_r($data);
+        // 耗时场景
+        sleep(10);
+
+        return "on task finish"; // 告诉worker
+    }
+
+    /**
+     * @param $server
+     * @param $task_id
+     * @param $data
+     */
+    public function onFinish($server, $task_id, $data)
+    {
+        echo "taskId:{$task_id}\n";
+        echo "finish-data-success:{$data}";
     }
 
     /**
