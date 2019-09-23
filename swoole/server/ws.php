@@ -34,6 +34,13 @@ class Ws
     public function onOpen($ws, $request)
     {
         echo "server: handshake success with fd{$request->fd}\n";
+
+        if ($request->fd == 1) {
+            // 每2秒执行
+            swoole_timer_tick(2000, function ($timer_id) {
+                echo "2s: timerId:{$timer_id}\n";
+            });
+        }
     }
 
     /**
@@ -50,7 +57,13 @@ class Ws
             'task' => 1,
             'fd' => $frame->fd,
         ];
-        $ws->task($data);
+//        $ws->task($data);
+
+        swoole_timer_after(5000, function () use ($ws, $frame) {
+            echo "5s-after\n";
+            $ws->push($frame->fd, "server-time-after:\n");
+        });
+
 
         $ws->push($frame->fd, "this is server".date("Y-m-d H:i:s"));
     }
