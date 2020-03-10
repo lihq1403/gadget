@@ -1,0 +1,6 @@
+{
+    "require": {
+        "knplabs/knp-snappy": "^1.2",
+        "h4cc/wkhtmltoimage-amd64": "^0.12.4"
+    }
+}
