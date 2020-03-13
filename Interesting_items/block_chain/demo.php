@@ -180,6 +180,11 @@ class BlockChain
             $lastHash = $block->prevHash;
         }
     }
+
+    public function __destruct()
+    {
+        $this->_db->close();
+    }
 }
 
 $bc = new BlockChain();
