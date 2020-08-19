@@ -1,16 +1,14 @@
 <?php
 
-/**
- * 接口
- * Interface Animal
- */
-
-interface Animal {
+interface Animal
+{
     public function call();
+
     public function run();
 }
 
-class HasName {
+class HasName
+{
     protected $name = 'name';
 
     public function getName()
@@ -19,7 +17,8 @@ class HasName {
     }
 }
 
-class Cat extends HasName implements Animal {
+class Cat extends HasName implements Animal
+{
     protected $name = 'cat';
 
     public function call()
@@ -33,14 +32,17 @@ class Cat extends HasName implements Animal {
     }
 }
 
-class Dog  extends HasName implements Animal {
+class Dog extends HasName implements Animal
+{
     protected $name = 'dog';
 
-    public function call() {
+    public function call()
+    {
         echo $this->getName() . ': 汪汪叫～' . PHP_EOL;
     }
 
-    public function run() {
+    public function run()
+    {
         echo $this->getName() . '在跑～' . PHP_EOL;
     }
 }
@@ -53,7 +55,7 @@ $dog = new Dog();
 $dog->call();
 $dog->run();
 
-/**
+/*
  * 接口（interface）:
 
 使用接口（interface），可以指定某个类必须实现哪些方法，但不需要定义这些方法的具体内容。
@@ -65,8 +67,7 @@ $dog->run();
 类要实现接口，必须使用和接口中所定义的方法完全一致的方式。否则会导致致命错误.
  */
 
-
-/**
+/*
  * 区别:
 
 对接口的继承使用implements,抽象类使用extends

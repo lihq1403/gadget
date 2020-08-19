@@ -1,11 +1,7 @@
 <?php
 
-/**
- * 抽象类
- * Class Animal
- */
-
-abstract class Animal {
+abstract class Animal
+{
     protected $name = 'animal';
 
     abstract public function call();
@@ -18,7 +14,8 @@ abstract class Animal {
     }
 }
 
-class Cat extends Animal {
+class Cat extends Animal
+{
     protected $name = 'cat';
 
     public function call()
@@ -32,7 +29,8 @@ class Cat extends Animal {
     }
 }
 
-class Dog extends Animal {
+class Dog extends Animal
+{
     protected $name = 'dog';
 
     public function call()
@@ -54,8 +52,7 @@ $dog = new Dog();
 $dog->call();
 $dog->run();
 
-
-/**
+/*
  * 抽象类（abstract）:
 
 定义为抽象的类不能被实例化.
