@@ -16,3 +16,6 @@
 
 #### 5、Laravel中间件,管道之面向切面编程
 - 示例：demo5.php
+
+#### 6、Laravel事件之观察者模式
+- 示例：demo6.php
