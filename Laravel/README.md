@@ -19,3 +19,6 @@
 
 #### 6、Laravel事件之观察者模式
 - 示例：demo6.php
+
+#### 7、新特性trait
+- 示例：demo7.php
