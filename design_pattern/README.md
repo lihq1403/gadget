@@ -12,7 +12,7 @@
 - [x] 原型模式（Prototype）
 - [x] 简单工厂模式（Simple Factory）
 - [x] 单例模式（Singleton）
-- [ ] 静态工厂模式（Static Factory）
+- [x] 静态工厂模式（Static Factory）
 
 ## 结构型
 - [x] 适配器模式（Adapter）
