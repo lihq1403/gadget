@@ -9,7 +9,7 @@
 - [x] 工厂方法模式（Factory Method）
 - [x] 多例模式（Multiton）
 - [x] 对象池模式（Pool）
-- [ ] 原型模式（Prototype）
+- [x] 原型模式（Prototype）
 - [x] 简单工厂模式（Simple Factory）
 - [x] 单例模式（Singleton）
 - [ ] 静态工厂模式（Static Factory）
