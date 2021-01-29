@@ -21,7 +21,7 @@
 - [ ] 数据映射模式（Data Mapper）
 - [ ] 装饰模式（Decorator）
 - [ ] 依赖注入模式（Dependency Injection）
-- [ ] 门面模式（Facade）
+- [x] 门面模式（Facade）
 - [ ] 流接口模式（Fluent Interface）
 - [ ] 享元模式（Flyweight）
 - [ ] 代理模式（Proxy）
