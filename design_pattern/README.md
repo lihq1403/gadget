@@ -24,7 +24,7 @@
 - [x] 门面模式（Facade）
 - [ ] 流接口模式（Fluent Interface）
 - [ ] 享元模式（Flyweight）
-- [ ] 代理模式（Proxy）
+- [x] 代理模式（Proxy）
 - [x] 注册模式（Registry）
 
 ## 行为型
