@@ -37,7 +37,7 @@
 - [x] 观察者模式（Observer）
 - [ ] 规格模式（Specification）
 - [ ] 状态模式（State）
-- [ ] 策略模式（Strategy）
+- [x] 策略模式（Strategy）
 - [ ] 模板方法模式（Template Method）
 - [ ] 访问者模式（Visitor）
 
