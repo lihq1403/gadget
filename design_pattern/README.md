@@ -16,7 +16,7 @@
 
 ## 结构型
 - [x] 适配器模式（Adapter）
-- [ ] 桥梁模式（Bridge）
+- [x] 桥梁模式（Bridge）
 - [ ] 组合模式（Composite）
 - [ ] 数据映射模式（Data Mapper）
 - [ ] 装饰模式（Decorator）
