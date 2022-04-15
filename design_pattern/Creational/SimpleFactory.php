@@ -10,24 +10,26 @@
 在工厂类的内部用了 switch 语句，用于判断 new 什么对象 (生产什么车)，这就是耦合的表现。
  */
 
-
-class VwCar{
+class VwCar
+{
     public function __construct()
     {
-        echo "I'm Vm!";
+        echo "I'm Vm!" . PHP_EOL;
     }
 }
 
-class AudiCar{
+class AudiCar
+{
     public function __construct()
     {
-        echo "I'm Audi!";
+        echo "I'm Audi!" . PHP_EOL;
     }
 }
 
-class Simple_Factory
+class SimpleFactory
 {
     const VM = 1;
+
     const AUDI = 2;
 
     public function produce($type)
@@ -35,15 +37,14 @@ class Simple_Factory
         switch ($type) {
             case self::VM:
                 return new VwCar();
-                break;
             case self::AUDI:
                 return new AudiCar();
-                break;
             default:
                 return [];
         }
     }
 }
 
-$factory = new Simple_Factory();
-$vm = $factory->produce(Simple_Factory::VM);
+$factory = new SimpleFactory();
+$factory->produce(SimpleFactory::VM);
+$factory->produce(SimpleFactory::AUDI);
