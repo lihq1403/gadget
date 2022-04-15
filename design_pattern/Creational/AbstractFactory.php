@@ -26,74 +26,81 @@
 
 /**
  * 抽象工厂-动物
- * Interface AnimalFactory
+ * Interface AnimalFactory.
  */
-interface AnimalFactory{
-    public function createCat();
-    public function createDog();
+interface AnimalFactory
+{
+    public function createCat(): Cat;
+
+    public function createDog(): Dog;
 }
 
 /**
  * 抽象产品-猫
- * Interface Cat
+ * Interface Cat.
  */
-interface Cat{
+interface Cat
+{
     public function voice();
 }
 
 /**
  * 抽象产品-狗
- * Interface Dog
+ * Interface Dog.
  */
-interface Dog{
+interface Dog
+{
     public function voice();
 }
 
 // 具体产品-黑猫
-class BlackCat implements Cat {
+class BlackCat implements Cat
+{
     public function voice()
     {
-        echo '黑猫 喵喵喵···';
+        echo '黑猫 喵喵喵···' . PHP_EOL;
     }
 }
 
 // 具体产品-白猫
-class WhiteCat implements Cat{
+class WhiteCat implements Cat
+{
     public function voice()
     {
-        echo '白猫 喵喵喵···';
+        echo '白猫 喵喵喵···' . PHP_EOL;
     }
 }
 
 // 具体产品-黑狗
-class BlackDog implements Dog{
+class BlackDog implements Dog
+{
     public function voice()
     {
-        echo '黑狗 汪汪汪···';
+        echo '黑狗 汪汪汪···' . PHP_EOL;
     }
 }
 
 // 具体产品-白狗
-class WhiteDog implements Dog{
+class WhiteDog implements Dog
+{
     public function voice()
     {
-        echo '白狗 汪汪汪···';
+        echo '白狗 汪汪汪···' . PHP_EOL;
     }
 }
 
-
 /**
  * 黑色加工厂
- * Class BlackAnimalFactory
+ * Class BlackAnimalFactory.
  */
 class BlackAnimalFactory implements AnimalFactory
 {
-    public function createCat()
+    public function createCat(): Cat
     {
         return new BlackCat();
     }
 
-    public function createDog()
+    public function createDog(): Dog
     {
         return new BlackDog();
     }
@@ -101,30 +108,33 @@ class BlackAnimalFactory implements AnimalFactory
 
 /**
  * 白色加工厂
- * Class WhiteAnimalFactory
+ * Class WhiteAnimalFactory.
  */
 class WhiteAnimalFactory implements AnimalFactory
 {
-    public function createCat()
+    public function createCat(): Cat
     {
         return new WhiteCat();
     }
 
-    public function createDog()
+    public function createDog(): Dog
     {
         return new WhiteDog();
     }
 }
 
-class Client {
-    public static function main() {
+class Client
+{
+    public static function main()
+    {
         // 生产黑色的动物
         self::run(new BlackAnimalFactory());
         // 生产白色的动物
         self::run(new WhiteAnimalFactory());
     }
 
-    public static function run(AnimalFactory $animalFactory) {
+    public static function run(AnimalFactory $animalFactory)
+    {
         $cat = $animalFactory->createCat();
         $cat->voice();
 
