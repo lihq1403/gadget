@@ -34,18 +34,14 @@ class ConCreatePrototype implements Prototype
         return $this->_name;
     }
 
-    public function shallowCopy()
+    public function shallowCopy(): ConCreatePrototype
     {
         return clone $this;
     }
 
     public function deepCopy()
     {
-        $serializeObj = serialize($this);
-
-        $cloneObj = unserialize($serializeObj);
-
-        return $cloneObj;
+        return unserialize(serialize($this));
     }
 }
 
@@ -95,7 +91,6 @@ class UsePrototype
 
 $test = new UsePrototype();
 $test->shallow();;
-
 $test->deep();
 
 // 浅拷贝：被拷贝对象的所有变量都含有与原对象相同的值，而且对其他对象的引用仍然是指向原来的对象，即浅拷贝只负责当前对象实例，对引用的对象不做拷贝。
