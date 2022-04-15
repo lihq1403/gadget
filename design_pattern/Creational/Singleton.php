@@ -12,9 +12,6 @@
 
 final class Singleton
 {
-    /**
-     * @var
-     */
     private static $instance;
 
     /**
@@ -26,7 +23,7 @@ final class Singleton
     {
     }
 
-    public static function getInstance()
+    public static function getInstance(): Singleton
     {
         if (null === static::$instance) {
             static::$instance = new static();
