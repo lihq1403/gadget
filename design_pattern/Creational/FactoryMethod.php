@@ -13,51 +13,51 @@ interface People
     public function marry();
 }
 
-class man implements People
+class Man implements People
 {
     public function marry()
     {
-        echo "送玫瑰，送戒指！<br>";
+        echo "送玫瑰，送戒指！" . PHP_EOL;
     }
 }
 
-class women implements People
+class Women implements People
 {
     public function marry()
     {
-        echo "穿婚纱！<br>";
+        echo "穿婚纱！" . PHP_EOL;
     }
 }
 
-interface createMan {
+interface CreateMan {
     public function create();
 }
 
-class FactoryMan implements createMan
+class FactoryMan implements CreateMan
 {
-    public function create()
+    public function create(): Man
     {
-        return new man();
+        return new Man();
     }
 }
 
-class FactoryWoman implements createMan
+class FactoryWoman implements CreateMan
 {
-    public function create()
+    public function create(): Women
     {
-        return new women();
+        return new Women();
     }
 }
 
 class Client
 {
     public function test() {
-        $Factory = new FactoryMan();
-        $man = $Factory->create();
+        $factory = new FactoryMan();
+        $man = $factory->create();
         $man->marry();
 
-        $Factory = new FactoryWoman();
-        $woman = $Factory->create();
+        $factory = new FactoryWoman();
+        $woman = $factory->create();
         $woman->marry();
     }
 }
