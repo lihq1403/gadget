@@ -34,10 +34,7 @@ class HandsetAddressList extends HandsetSoft
 
 abstract class HandsetBrand
 {
-    /**
-     * @var HandsetSoft
-     */
-    protected $soft;
+    protected HandsetSoft $soft;
 
     public function setHandsetSoft(HandsetSoft $soft)
     {
