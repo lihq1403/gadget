@@ -19,7 +19,7 @@
 - [x] 桥梁模式（Bridge）
 - [x] 组合模式（Composite）
 - [x] 数据映射模式（Data Mapper）
-- [ ] 装饰模式（Decorator）
+- [x] 装饰模式（Decorator）
 - [ ] 依赖注入模式（Dependency Injection）
 - [x] 门面模式（Facade）
 - [x] 流接口模式（Fluent Interface）
