@@ -68,7 +68,7 @@ class WeiXinAdapter extends WeiXin implements Adapter
  */
 class LoginUser
 {
-    private $adapter;
+    private Adapter $adapter;
 
     public function setAdapter(Adapter $adapter)
     {
