@@ -47,7 +47,7 @@ class Leaf extends Component
  */
 class Composite extends Component
 {
-    private $children = [];
+    private array $children = [];
 
     public function add(Component $component)
     {
