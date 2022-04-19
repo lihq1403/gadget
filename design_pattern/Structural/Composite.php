@@ -7,9 +7,9 @@
 
 abstract class Component
 {
-    protected $name;
+    protected string $name;
 
-    function __construct($name)
+    function __construct(string $name)
     {
         $this->name = $name;
     }
@@ -91,7 +91,7 @@ $comp2->add(new Leaf("Leaf XB"));
 
 $comp->add($comp2);
 
-$root->add(new  Leaf("Leaf C"));
+$root->add(new Leaf("Leaf C"));
 
 $leaf = new Leaf("Leaf D");
 $root->add($leaf);
