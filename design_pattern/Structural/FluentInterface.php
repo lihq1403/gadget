@@ -7,20 +7,11 @@
 
 class Sql
 {
-    /**
-     * @var array
-     */
-    private $fields = [];
+    private array $fields = [];
 
-    /**
-     * @var array
-     */
-    private $from = [];
+    private array $from = [];
 
-    /**
-     * @var array
-     */
-    private $where = [];
+    private array $where = [];
 
     public function select(array $fields = ['*']): Sql
     {
