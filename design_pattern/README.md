@@ -23,7 +23,7 @@
 - [x] 依赖注入模式（Dependency Injection）
 - [x] 门面模式（Facade）
 - [x] 流接口模式（Fluent Interface）
-- [ ] 享元模式（Flyweight）
+- [x] 享元模式（Flyweight）
 - [x] 代理模式（Proxy）
 - [x] 注册模式（Registry）
 
