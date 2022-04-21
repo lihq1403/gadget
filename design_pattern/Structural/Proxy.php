@@ -6,7 +6,7 @@
 
 class Record
 {
-    private $data;
+    private array $data;
 
     public function __construct(array $data = [])
     {
@@ -26,9 +26,9 @@ class Record
 
 class RecordProxy extends Record
 {
-    private $isDirty = false;
+    private bool $isDirty = false;
 
-    private $isInitialized  = false;
+    private bool $isInitialized  = false;
 
     public function __construct(array $data)
     {
