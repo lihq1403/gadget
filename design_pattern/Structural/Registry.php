@@ -8,41 +8,39 @@
 class Registry
 {
     /**
-     * 树的枝干-用于储存树上的果实（实例）
-     * @var
+     * 树的枝干-用于储存树上的果实（实例）.
      */
-    public static $objects;
+    public static array $objects;
 
     /**
-     * 将实例插入注册树中
-     * @param $alias | 对象别名-注册树中的名称
-     * @param $object | 对象实例
+     * 将实例插入注册树中.
+     * @param string $alias | 对象别名-注册树中的名称
+     * @param object $object | 对象实例
      */
-    public static function set($alias, $object)
+    public static function set(string $alias, object $object)
     {
         self::$objects[$alias] = $object;
     }
 
     /**
-     * 从注册树中读取实例
-     * @param $alias 对象别名-注册树中的名称
+     * 从注册树中读取实例.
+     * @param string $alias 对象别名-注册树中的名称
      * @return bool|mixed 返回的对象实例
      */
-    public static function get($alias)
+    public static function get(string $alias)
     {
         if (isset(self::$objects[$alias])) {
             return self::$objects[$alias];
-        } else {
-            echo '您要找的对象实例不存在哦' . PHP_EOL;
-            return false;
         }
+        echo '您要找的对象实例不存在哦' . PHP_EOL;
+        return false;
     }
 
     /**
-     * 销毁注册树中的实例
-     * @param $alias 对象别名-注册树中的名称
+     * 销毁注册树中的实例.
+     * @param string $alias 对象别名-注册树中的名称
      */
-    public static function del($alias)
+    public static function del(string $alias)
     {
         unset(self::$objects[$alias]);
     }
