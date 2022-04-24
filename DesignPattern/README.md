@@ -28,7 +28,7 @@
 - [x] 注册模式（Registry）
 
 ## 行为型
-- [ ] 责任链模式（Chain Of Responsibilities）
+- [x] 责任链模式（Chain Of Responsibilities）
 - [ ] 命令行模式（Command）
 - [ ] 迭代器模式（Iterator）
 - [ ] 中介者模式（Mediator）
