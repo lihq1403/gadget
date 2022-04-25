@@ -35,7 +35,7 @@
 - [x] 备忘录模式（Memento）
 - [x] 空对象模式（Null Object）
 - [x] 观察者模式（Observer）
-- [ ] 规格模式（Specification）
+- [x] 规格模式（Specification）
 - [ ] 状态模式（State）
 - [x] 策略模式（Strategy）
 - [ ] 模板方法模式（Template Method）
