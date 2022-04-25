@@ -33,7 +33,7 @@
 - [x] 迭代器模式（Iterator）
 - [x] 中介者模式（Mediator）
 - [x] 备忘录模式（Memento）
-- [ ] 空对象模式（Null Object）
+- [x] 空对象模式（Null Object）
 - [x] 观察者模式（Observer）
 - [ ] 规格模式（Specification）
 - [ ] 状态模式（State）
