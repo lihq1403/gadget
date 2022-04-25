@@ -31,7 +31,7 @@
 - [x] 责任链模式（Chain Of Responsibilities）
 - [x] 命令行模式（Command）
 - [x] 迭代器模式（Iterator）
-- [ ] 中介者模式（Mediator）
+- [x] 中介者模式（Mediator）
 - [ ] 备忘录模式（Memento）
 - [ ] 空对象模式（Null Object）
 - [x] 观察者模式（Observer）
