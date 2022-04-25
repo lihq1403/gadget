@@ -29,7 +29,7 @@
 
 ## 行为型
 - [x] 责任链模式（Chain Of Responsibilities）
-- [ ] 命令行模式（Command）
+- [x] 命令行模式（Command）
 - [ ] 迭代器模式（Iterator）
 - [ ] 中介者模式（Mediator）
 - [ ] 备忘录模式（Memento）
