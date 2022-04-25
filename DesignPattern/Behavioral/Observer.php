@@ -10,7 +10,7 @@
 
 /**
  * 首先定义一个观察者接口，所有的观察者都实现这个接口
- * Interface observer
+ * Interface observer.
  */
 interface Observer
 {
@@ -19,15 +19,17 @@ interface Observer
 
 /**
  * 事件生成器的抽象类
- * Class EventGenerator
+ * Class EventGenerator.
  */
 abstract class EventGenerator
 {
-    private $observers = [];
+    /**
+     * @var Observer[]
+     */
+    private array $observers = [];
 
     /**
-     * 添加观察者
-     * @param Observer $observer
+     * 添加观察者.
      */
     public function addObserver(Observer $observer)
     {
@@ -35,7 +37,7 @@ abstract class EventGenerator
     }
 
     /**
-     * 通知观察者
+     * 通知观察者.
      */
     public function notify()
     {
@@ -47,16 +49,16 @@ abstract class EventGenerator
 
 /**
  * 事件类
- * Class Event
+ * Class Event.
  */
 class Event extends EventGenerator
 {
     /**
-     * 定义一个触发观察者的方法
+     * 定义一个触发观察者的方法.
      */
     public function trigger()
     {
-        echo "入职Event " . PHP_EOL;
+        echo '入职Event ' . PHP_EOL;
 
         // 通知观察者
         $this->notify();
@@ -65,25 +67,25 @@ class Event extends EventGenerator
 
 /**
  * 网管
- * Class NetworkManagerObserver
+ * Class NetworkManagerObserver.
  */
 class NetworkManagerObserver implements Observer
 {
     public function update()
     {
-        echo "网管给你配好电脑和办公用品" . PHP_EOL;
+        echo '网管给你配好电脑和办公用品' . PHP_EOL;
     }
 }
 
 /**
  * 经理
- * Class DirectorObserver
+ * Class DirectorObserver.
  */
 class DirectorObserver implements Observer
 {
     public function update()
     {
-        echo "经理带你熟悉部门" . PHP_EOL;
+        echo '经理带你熟悉部门' . PHP_EOL;
     }
 }
 
