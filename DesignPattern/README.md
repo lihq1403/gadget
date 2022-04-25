@@ -30,7 +30,7 @@
 ## 行为型
 - [x] 责任链模式（Chain Of Responsibilities）
 - [x] 命令行模式（Command）
-- [ ] 迭代器模式（Iterator）
+- [x] 迭代器模式（Iterator）
 - [ ] 中介者模式（Mediator）
 - [ ] 备忘录模式（Memento）
 - [ ] 空对象模式（Null Object）
