@@ -12,7 +12,7 @@
 
 class Context
 {
-    private $comparator;
+    private ComparatorInterface $comparator;
 
     public function __construct(ComparatorInterface $comparator)
     {
@@ -137,7 +137,7 @@ class CarStrategy implements TravelStrategy
  */
 class PersonContext
 {
-    private $_strategy = null;
+    private ?TravelStrategy $_strategy = null;
 
     public function __construct(TravelStrategy $travelStrategy)
     {
