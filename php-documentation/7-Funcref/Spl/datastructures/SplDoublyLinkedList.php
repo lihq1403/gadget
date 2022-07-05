@@ -93,6 +93,10 @@ function testMode(int $mode)
 {
     $list = new SplDoublyLinkedList();
     $list->setIteratorMode($mode);
+
+    $mode = $list->getIteratorMode();
+    var_dump("mode: {$mode}");
+
     $list->push('a');
     $list->push('b');
     $list->push('c');
@@ -106,6 +110,8 @@ function testMode(int $mode)
 // 先进先出，删除已迭代节点
 testMode(SplDoublyLinkedList::IT_MODE_FIFO | SplDoublyLinkedList::IT_MODE_DELETE);
 /**
+ * mode: 1
+ *
  * key:0 value:a
  * key:0 value:b
  * key:0 value:c
@@ -116,6 +122,8 @@ testMode(SplDoublyLinkedList::IT_MODE_FIFO | SplDoublyLinkedList::IT_MODE_DELETE
 // 先进先出，保留已迭代节点
 testMode(SplDoublyLinkedList::IT_MODE_FIFO | SplDoublyLinkedList::IT_MODE_KEEP);
 /**
+ * mode: 0
+ *
  * key:0 value:a
  * key:1 value:b
  * key:2 value:c
@@ -126,6 +134,8 @@ testMode(SplDoublyLinkedList::IT_MODE_FIFO | SplDoublyLinkedList::IT_MODE_KEEP);
 // 后进先出，删除已迭代节点
 testMode(SplDoublyLinkedList::IT_MODE_LIFO | SplDoublyLinkedList::IT_MODE_DELETE);
 /**
+ * mode: 3
+ *
  * key:2 value:c
  * key:1 value:b
  * key:0 value:a
@@ -136,6 +146,8 @@ testMode(SplDoublyLinkedList::IT_MODE_LIFO | SplDoublyLinkedList::IT_MODE_DELETE
 // 后进先出，保留已迭代节点
 testMode(SplDoublyLinkedList::IT_MODE_LIFO | SplDoublyLinkedList::IT_MODE_KEEP);
 /**
+ * mode: 2
+ *
  * key:2 value:c
  * key:1 value:b
  * key:0 value:a
