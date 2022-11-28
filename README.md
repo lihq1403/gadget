@@ -1,17 +1,22 @@
 # 日常学习
 
+- AbstractAndInterface - 抽象与接口
 - Algorithm - 常用算法学习
+- Autoload php自动加载
+- CodeSnippet 代码片段
+- ComposerItemsStudy 优秀composer项目学习
 - CookingFood - OOP思想
-- Interesting_items - 有趣的实验项目
+- DesignPattern 设计模式学习
+- FilterFunction 常用过滤器
+- Hook - 钩子学习
+- InterestingItems - 有趣的实验项目
 - Jurisdiction - 运算符
-- Magic_Methods - 魔术方法
-- abstract-interface 抽象类与接口
-- autoload 自动加载
-- design_pattern - 设计模式
-- filter-function 常用过滤器
-- hook - 钩子学习
-- laravel - laravel框架概念
-- mysql - 数据库学习
-- php-documentation - php官方文档学习
-- reflection - 反射机制
-- leetcode - 力扣学习
+- Laravel - laravel框架概念
+- LeetCode - 力扣学习
+- MagicMethods - 魔术方法
+- MySQL - MySQL数据库学习
+- NodeJs - NodeJs学习
+- PhpDocumentation - php官方文档学习
+- RabbitMQ - RabbitMQ学习
+- Reflection - 反射机制
+- Swoole - Swoole学习
