@@ -2,12 +2,12 @@
 
 - AbstractAndInterface - 抽象与接口
 - Algorithm - 常用算法学习
-- Autoload php自动加载
-- CodeSnippet 代码片段
-- ComposerItemsStudy 优秀composer项目学习
+- Autoload - php自动加载
+- CodeSnippet - 代码片段
+- ComposerItemsStudy - 优秀composer项目学习
 - CookingFood - OOP思想
-- DesignPattern 设计模式学习
-- FilterFunction 常用过滤器
+- DesignPattern - 设计模式学习
+- FilterFunction - 常用过滤器
 - Hook - 钩子学习
 - InterestingItems - 有趣的实验项目
 - Jurisdiction - 运算符
